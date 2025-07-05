@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Bus Ticket to Dwarka</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fef9ef;
+      padding: 40px;
+    }
+    h1 { color: #6a1b9a; text-align: center; }
+    form {
+      background: #fff;
+      padding: 30px;
+      max-width: 500px;
+      margin: 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    label { display: block; margin-top: 20px; font-weight: bold; }
+    input, select {
+      width: 100%; padding: 10px; margin-top: 6px;
+      border-radius: 6px; border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 25px; padding: 12px;
+      width: 100%; background: #6a1b9a;
+      color: white; border: none;
+      border-radius: 6px; font-size: 16px;
+    }
+    .success-msg {
+      color: green; text-align: center;
+      margin-top: 20px; display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Book a Bus to Dwarka</h1>
+  <form id="busForm">
+    <label for="from">From</label>
+    <input type="text" id="from" required>
+
+    <label for="date">Travel Date</label>
+    <input type="date" id="date" required>
+
+    <label for="seats">Seats</label>
+    <select id="seats">
+      <option>1</option>
+      <option>2</option>
+      <option>3+</option>
+    </select>
+
+    <button type="submit">Book Bus</button>
+    <div class="success-msg" id="successMsg">✅ Your bus ticket is booked!</div>
+  </form>
+
+  <script>
+    document.getElementById("busForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("successMsg").style.display = "block";
+      this.reset();
+    });
+  </script>
+</body>
+</html>

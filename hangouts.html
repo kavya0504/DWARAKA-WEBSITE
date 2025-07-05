@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Explore Hangouts in Dwarka</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e0f7fa;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #00796b;
+      text-align: center;
+    }
+
+    form {
+      background: #ffffff;
+      padding: 30px;
+      max-width: 500px;
+      margin: 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px;
+      width: 100%;
+      background: #00796b;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #004d40;
+    }
+
+    .suggestions {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: none;
+    }
+
+    .suggestions h2 {
+      color: #00796b;
+      margin-bottom: 10px;
+    }
+
+    .suggestions ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Find Top Hangout Spots in Dwarka</h1>
+
+  <form id="hangoutForm">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" required>
+
+    <label for="preference">Type of Hangout</label>
+    <select id="preference">
+      <option value="beach">Beach</option>
+      <option value="sunset">Sunset Point</option>
+      <option value="market">Local Market</option>
+      <option value="temple">Peaceful Area</option>
+    </select>
+
+    <button type="submit">Find Hangouts</button>
+  </form>
+
+  <div class="suggestions" id="suggestionsBox">
+    <h2>Suggested Spots:</h2>
+    <ul id="suggestionList"></ul>
+  </div>
+
+  <script>
+    const form = document.getElementById("hangoutForm");
+    const suggestionsBox = document.getElementById("suggestionsBox");
+    const suggestionList = document.getElementById("suggestionList");
+
+    const suggestions = {
+      beach: [
+        "Dwarka Beach – Peaceful coastline near Dwarkadhish Temple",
+        "Okha Madhi Beach – Clean and secluded spot 30 km away",
+        "Chakratirth Beach – A sacred yet scenic hangout"
+      ],
+      sunset: [
+        "Sunset Point Dwarka – Near Sudama Setu bridge",
+        "Lighthouse View – Beautiful sunset views near the sea",
+        "Bhadkeshwar Mahadev – Rocks and waves make it ideal"
+      ],
+      market: [
+        "Dwarka Local Bazaar – Souvenirs, beads, and idols",
+        "Dwarka Crafts Market – Handicrafts and Gujarati art",
+        "Main Temple Road – Street vendors with snacks & gifts"
+      ],
+      temple: [
+        "Gita Mandir – Calm and spiritually enriching",
+        "Rukmini Devi Temple – Peaceful area 2 km away",
+        "ISKCON Dwarka – Chanting and meditative atmosphere"
+      ]
+    };
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const type = document.getElementById("preference").value;
+      const items = suggestions[type] || [];
+
+      suggestionList.innerHTML = "";
+      items.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        suggestionList.appendChild(li);
+      });
+
+      suggestionsBox.style.display = "block";
+    });
+  </script>
+
+</body>
+</html>
+

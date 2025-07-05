@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Hotel in Dwarka</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f8f6;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #145a32;
+      text-align: center;
+    }
+
+    form {
+      background: #fff;
+      padding: 30px;
+      max-width: 500px;
+      margin: 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px;
+      width: 100%;
+      background: #145a32;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .success-msg {
+      color: green;
+      text-align: center;
+      margin-top: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Book a Hotel in Dwarka</h1>
+
+  <form id="hotelForm">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" required>
+
+    <label for="checkin">Check-In Date</label>
+    <input type="date" id="checkin" required>
+
+    <label for="checkout">Check-Out Date</label>
+    <input type="date" id="checkout" required>
+
+    <label for="guests">Guests</label>
+    <select id="guests">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4+</option>
+    </select>
+
+    <button type="submit">Book Hotel</button>
+    <div class="success-msg" id="successMsg">✅ Your hotel has been booked!</div>
+  </form>
+
+  <script>
+    document.getElementById("hotelForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("successMsg").style.display = "block";
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
+

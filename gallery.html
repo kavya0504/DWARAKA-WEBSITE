@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dwarka Art Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000005; /* Soft light background */
+      color: #333;
+    }
+
+    .gallery-container {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 20px;
+      background-color: #080129;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 3rem;
+      color: #f7f5f3;
+      text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      background-color: #fff8e1;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 2px solid #e0c097;
+    }
+
+    .caption {
+      padding: 15px;
+      text-align: center;
+      color: #422a17;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="gallery-container">
+  <h1>Gallery of Ancient Dwarka</h1>
+  <div class="gallery-grid">
+    <div class="card">
+      <img src="art1.png" alt="Ancient Dwarka Art 1">
+      <div class="caption">A royal cityscape depiction</div>
+    </div>
+    <div class="card">
+      <img src="art2.png" alt="Ancient Dwarka Art 2">
+      <div class="caption">Stone palace architecture</div>
+    </div>
+    <div class="card">
+      <img src="art3.png" alt="Ancient Dwarka Art 3">
+      <div class="caption">Traditional mural artwork</div>
+    </div>
+    <div class="card">
+      <img src="art4.png" alt="Ancient Dwarka Art 4">
+      <div class="caption">Grand coronation gathering</div>
+    </div>
+    <div class="card">
+      <img src="art5.png" alt="Ancient Dwarka Art 5">
+      <div class="caption">Seaside settlement vision</div>
+    </div>
+    <div class="card">
+      <img src="art6.png" alt="Ancient Dwarka Art 6">
+      <div class="caption">Flourishing riverside scene</div>
+    </div>
+    <div class="card">
+      <img src="art7.png" alt="Ancient Dwarka Art 7">
+      <div class="caption">Contemporary abstract form</div>
+    </div>
+    <div class="card">
+      <img src="art8.png" alt="Ancient Dwarka Art 8">
+      <div class="caption">Krishna and Rukmini in Dwarka</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

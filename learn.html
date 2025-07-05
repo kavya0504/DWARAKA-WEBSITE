@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learn More - Dwarka</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    :root {
+      --accent: #d97706;
+      --bg-light: #fffaf3;
+      --bg-alt: #f2e8dc;
+      --text-dark: #2b2b2b;
+      --text-accent: #7a4f00;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: white;
+      z-index: 1000;
+      padding: 10px 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+
+    nav a {
+      margin-left: 15px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .highlight-box {
+      background-color: #fff4e0;
+      padding: 25px;
+      border-left: 6px solid var(--accent);
+      margin: 40px auto;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: var(--text-accent);
+      text-align: center;
+      border-radius: 10px;
+      max-width: 1000px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .hero {
+      background-image: url('art1.png');
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: overlay;
+      background-color: rgba(217, 119, 6, 0.4);
+      padding: 120px 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      margin: 0;
+      text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 20px auto 0;
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 60px 20px;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section.alt {
+      background-color: var(--bg-alt);
+    }
+
+    .section img {
+      max-width: 480px;
+      width: 100%;
+      border-radius: 12px;
+      margin: 20px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .section img:hover {
+      transform: scale(1.03);
+    }
+
+    .content {
+      max-width: 500px;
+      padding: 20px;
+    }
+
+    .content h2 {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 15px;
+    }
+
+    .content p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Dwarka</h1>
+  <nav>
+    <a href="#mystery">Mystery</a>
+    <a href="#heritage">Heritage</a>
+    <a href="#culture">Culture</a>
+    <a href="#more">More</a>
+  </nav>
+</header>
+
+<div class="highlight-box" id="mystery">
+  🌊 <strong>The Lost City of Dwarka:</strong><br>
+  Beneath the Arabian Sea lies an ancient submerged kingdom. Believed to have been founded by Lord Krishna, ruins discovered in 2001 hint at a civilization over 9,000 years old.
+</div>
+
+<div class="hero">
+  <h2>Discover the Royal Legacy of Dwarka</h2>
+  <p>Explore India’s sacred city where mythology, marine archaeology, and faith meet the sea.</p>
+</div>
+
+<div class="section">
+  <img src="art4.png" alt="Dwarka Temple">
+  <div class="content">
+    <h2>The Mythical City</h2>
+    <p>Dwarka, once the capital of Lord Krishna's kingdom, is one of the oldest religious cities in the world. Submerged ruins discovered offshore add a mysterious depth to its story.</p>
+  </div>
+</div>
+
+<div class="section alt" id="heritage">
+  <img src="art5.png" alt="Seaside Scene">
+  <div class="content">
+    <h2>Land of Sacred Shores</h2>
+    <p>Situated by the Arabian Sea, Dwarka’s ghats and golden shores are dotted with temples and rituals that echo the Vedic past of India.</p>
+  </div>
+</div>
+
+<div class="highlight-box">
+  ✨ Did you know? Dwarka is one of the Char Dham — the four most sacred Hindu pilgrimage destinations.
+</div>
+
+<div class="section" id="culture">
+  <img src="art2.png" alt="Krishna Art">
+  <div class="content">
+    <h2>A Cultural Treasure</h2>
+    <p>From Janmashtami to coastal fairs, Dwarka celebrates a vibrant mix of devotion, folklore, and classical heritage that continues to thrive today.</p>
+  </div>
+</div>
+
+<div class="section alt" id="more">
+  <img src="art8.png" alt="Krishna and Rukmini">
+  <div class="content">
+    <h2>More Than a Pilgrimage</h2>
+    <p>With its sacred rivers, coral coastlines, and peaceful ashrams, Dwarka is not just a place of worship — it’s an experience of inner peace.</p>
+  </div>
+</div>
+
+<div class="section">
+  <img src="water.png" alt="Underwater Dwarka">
+  <div class="content">
+    <h2>The Underwater Mystery</h2>
+    <p>Offshore marine discoveries of temple-like structures and city walls hint that Dwarka’s mythology may be rooted in real, ancient history. It’s one of archaeology’s greatest unsolved stories.</p>
+  </div>
+</div>
+
+<div class="highlight-box">
+  🐚 Myth meets science beneath the Arabian Sea — and Dwarka's legend lives on.
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="topBtn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+  // Show sections with animation
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.section').forEach(section => {
+    observer.observe(section);
+  });
+
+  // Show top button on scroll
+  const topBtn = document.getElementById('topBtn');
+  window.onscroll = () => {
+    topBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+  };
+</script>
+
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Services - Dwarka</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #092e53;
+      color: #ffffff;
+    }
+
+    .services-container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.8rem;
+      color: #f0f2f4;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background-color: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+      color: #000;
+      cursor: pointer;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    }
+
+    .service-card i {
+      font-size: 36px;
+      margin-bottom: 15px;
+      color: #1b365d;
+    }
+
+    .service-card h2 {
+      font-size: 1.4rem;
+      color: #113057;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .details {
+      display: none;
+      margin-top: 15px;
+      font-size: 0.9rem;
+      color: #333;
+      text-align: left;
+    }
+
+    .service-card.active .details {
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .services-container {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="services-container">
+  <h1>Our Services</h1>
+  <div class="services-grid">
+    <div class="service-card" onclick="toggleDetails(this)">
+      <i class="fas fa-map-marked-alt"></i>
+      <h2>Tour Packages</h2>
+      <p>Explore Dwarka with curated tour packages.</p>
+      <div class="details">
+        Includes visits to Dwarkadhish Temple, Bet Dwarka, Nageshwar Jyotirlinga, Rukmini Temple and more. 1-day, 2-day and 3-day packages available with travel and accommodation.
+      </div>
+    </div>
+
+    <div class="service-card" onclick="toggleDetails(this)">
+      <i class="fas fa-user-tie"></i>
+      <h2>Guided Tours</h2>
+      <p>Professional guides for key sites.</p>
+      <div class="details">
+        Multilingual guides available (Hindi, English, Gujarati). Learn about Dwarka's mythological, cultural and historical significance while visiting temples and heritage points.
+      </div>
+    </div>
+
+    <div class="service-card" onclick="toggleDetails(this)">
+      <i class="fas fa-bus-alt"></i>
+      <h2>Transport Booking</h2>
+      <p>Book cabs, buses and pickups.</p>
+      <div class="details">
+        Get help booking auto rickshaws, taxis, full-day cabs, and intercity travel. Airport and station pickup/drop-off options available at affordable prices.
+      </div>
+    </div>
+
+    <div class="service-card" onclick="toggleDetails(this)">
+      <i class="fas fa-hotel"></i>
+      <h2>Accommodation</h2>
+      <p>Find a stay that fits your budget.</p>
+      <div class="details">
+        From guest houses and dharamshalas to AC hotels near the temple. We help you find clean, verified places with real-time availability and booking support.
+      </div>
+    </div>
+
+    <div class="service-card" onclick="toggleDetails(this)">
+      <i class="fas fa-utensils"></i>
+      <h2>Food & Dining</h2>
+      <p>Enjoy local flavors of Dwarka.</p>
+      <div class="details">
+        Try Gujarati thalis, sattvik food, and street snacks. We provide recommendations for hygienic veg restaurants close to temple routes and ghats.
+      </div>
+    </div>
+
+    <div class="service-card" onclick="toggleDetails(this)">
+      <i class="fas fa-route"></i>
+      <h2>Custom Itinerary</h2>
+      <p>Plan your visit, your way.</p>
+      <div class="details">
+        Submit your interests and dates — we help create a day-by-day travel plan including darshans, sightseeing, dining and rest stops customized to your preferences.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleDetails(card) {
+    card.classList.toggle("active");
+  }
+</script>
+
+</body>
+</html>
+
+

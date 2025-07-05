@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Request Homestay in Dwarka</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f5ec;
+      padding: 40px;
+    }
+    h1 { color: #4e342e; text-align: center; }
+    form {
+      background: #fff;
+      padding: 30px;
+      max-width: 500px;
+      margin: 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    label { display: block; margin-top: 20px; font-weight: bold; }
+    input, select {
+      width: 100%; padding: 10px; margin-top: 6px;
+      border-radius: 6px; border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 25px; padding: 12px;
+      width: 100%; background: #4e342e;
+      color: white; border: none;
+      border-radius: 6px; font-size: 16px;
+    }
+    .success-msg {
+      color: green; text-align: center;
+      margin-top: 20px; display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Request a Homestay in Dwarka</h1>
+  <form id="homestayForm">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" required>
+
+    <label for="checkin">Check-In</label>
+    <input type="date" id="checkin" required>
+
+    <label for="checkout">Check-Out</label>
+    <input type="date" id="checkout" required>
+
+    <label for="preferences">Preferences</label>
+    <input type="text" id="preferences" placeholder="Vegetarian meals, Wi-Fi etc.">
+
+    <button type="submit">Send Request</button>
+    <div class="success-msg" id="successMsg">✅ Request sent successfully!</div>
+  </form>
+
+  <script>
+    document.getElementById("homestayForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("successMsg").style.display = "block";
+      this.reset();
+    });
+  </script>
+</body>
+</html>

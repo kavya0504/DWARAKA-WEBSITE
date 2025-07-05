@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cab Booking in Dwarka</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fffde7;
+      padding: 40px;
+    }
+    h1 { color: #f57f17; text-align: center; }
+    form {
+      background: #fff;
+      padding: 30px;
+      max-width: 500px;
+      margin: 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    label { display: block; margin-top: 20px; font-weight: bold; }
+    input, select {
+      width: 100%; padding: 10px; margin-top: 6px;
+      border-radius: 6px; border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 25px; padding: 12px;
+      width: 100%; background: #f57f17;
+      color: white; border: none;
+      border-radius: 6px; font-size: 16px;
+    }
+    .success-msg {
+      color: green; text-align: center;
+      margin-top: 20px; display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Book a Cab in Dwarka</h1>
+  <form id="cabForm">
+    <label for="pickup">Pickup Location</label>
+    <input type="text" id="pickup" required>
+
+    <label for="destination">Destination</label>
+    <input type="text" id="destination" required>
+
+    <label for="date">Pickup Date</label>
+    <input type="date" id="date" required>
+
+    <label for="time">Pickup Time</label>
+    <input type="time" id="time" required>
+
+    <button type="submit">Book Cab</button>
+    <div class="success-msg" id="successMsg">✅ Cab booked successfully!</div>
+  </form>
+
+  <script>
+    document.getElementById("cabForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("successMsg").style.display = "block";
+      this.reset();
+    });
+  </script>
+</body>
+</html>
